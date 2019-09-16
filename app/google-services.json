@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "894570509428",
+    "firebase_url": "https://cvdprevention-6a669.firebaseio.com",
+    "project_id": "cvdprevention-6a669",
+    "storage_bucket": "cvdprevention-6a669.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894570509428:android:a9f0c15d275fdd0d",
+        "android_client_info": {
+          "package_name": "com.example.kvb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894570509428-dulsjeskei5g9tle51ofi51l41jp70dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtwcY3rO_VDtXjZzNXoexS-mExPtWWDHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894570509428-dulsjeskei5g9tle51ofi51l41jp70dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

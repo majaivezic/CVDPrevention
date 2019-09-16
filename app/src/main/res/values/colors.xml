@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="primary_text">#50514F</color>
+    <color name="secondary_text">#757575</color>
+    <color name="light_text_icons">#FFFFFF</color>
+    <color name="dark_text_icons">#D8DBE2</color>
+
+    <color name="dark_primary_color">#3A606E</color>
+    <color name="light_primary_color">#E38674</color>
+    <color name="primary_color">#A9E5BB</color>
+
+    <color name="vhr_hr_color">#FF6A61</color>
+    <color name="mr_color">#fdfd96</color>
+    <color name="lr_color">#C9FFBF</color>
+</resources>

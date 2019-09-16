@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/scrollView2">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/linearLayout3">
+        <TextView
+                android:text="@string/age_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/age_label"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:layout_marginTop="16dp" android:layout_marginStart="16dp"
+                android:textColor="@color/primary_text"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/age_input"
+                android:hint="@string/age_input_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/age_label" android:textSize="14sp"
+                android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender" android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                app:layout_constraintTop_toBottomOf="@+id/age_input" android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/gender">
+            <RadioButton
+                    android:text="@string/gender_rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/female_rb"
+                    android:textColor="@color/secondary_text"/>
+            <RadioButton
+                    android:text="@string/gender_rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/male_rb"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginStart="16dp"/>
+        </RadioGroup>
+
+        <TextView
+                android:text="@string/cigarette_smoker_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/smoking_status_label"
+                android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:textSize="20sp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup2"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/smoking_status_label"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp">
+            <RadioButton
+                    android:text="@string/smoking_status_cb_yes"
+                    android:id="@+id/smoking_status_true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_text"/>
+            <RadioButton
+                    android:text="@string/smoking_status_cb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smoking_status_false"
+                    android:textColor="@color/secondary_text"
+                    android:layout_marginStart="16dp"
+            />
+        </RadioGroup>
+
+
+        <TextView
+                android:text="@string/waist_circumference_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/waist_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintBottom_toTopOf="@+id/waist_input" android:textColor="@color/primary_text"
+                android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="20sp"
+                app:layout_constraintVertical_chainStyle="spread_inside"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textLongMessage|number"
+                android:id="@+id/waist_input"
+                android:hint="@string/waist_circumference_hint"
+                app:layout_constraintTop_toBottomOf="@+id/waist_label"
+                app:layout_constraintBottom_toTopOf="@+id/systolic_bp_label" android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/systolic_blood_pressure_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/systolic_bp_label"
+                app:layout_constraintTop_toBottomOf="@+id/waist_input"
+                app:layout_constraintBottom_toTopOf="@+id/systolic_bp_input" android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:textSize="20sp" android:layout_marginTop="24dp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/systolic_bp_input"
+                android:hint="@string/systolic_blood_pressure_hint"
+                app:layout_constraintTop_toBottomOf="@+id/systolic_bp_label"
+                app:layout_constraintBottom_toTopOf="@+id/diastolic_bp_label"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textSize="14sp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/diastolic_blood_pressure_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diastolic_bp_label"
+                app:layout_constraintTop_toBottomOf="@+id/systolic_bp_input"
+                app:layout_constraintBottom_toTopOf="@+id/diastolic_bp_input" android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/diastolic_bp_input"
+                android:hint="@string/diastolic_blood_pressure_hint"
+                app:layout_constraintTop_toBottomOf="@+id/diastolic_bp_label"
+                app:layout_constraintBottom_toTopOf="@+id/cholesterol_label"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/total_cholesterol_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cholesterol_label"
+                app:layout_constraintTop_toBottomOf="@+id/diastolic_bp_input"
+                app:layout_constraintBottom_toTopOf="@+id/cholesterol_input" android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/cholesterol_input"
+                android:hint="@string/mmol_hint"
+                app:layout_constraintTop_toBottomOf="@+id/cholesterol_label"
+                app:layout_constraintBottom_toTopOf="@+id/hdl_label" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:textSize="14sp"
+                android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/hdl_cholesterol_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hdl_label"
+                app:layout_constraintTop_toBottomOf="@+id/cholesterol_input"
+                app:layout_constraintBottom_toTopOf="@+id/hdl_input" android:textColor="@color/primary_text"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/hdl_input"
+                android:hint="@string/mmol_hint"
+                app:layout_constraintTop_toBottomOf="@+id/hdl_label"
+                app:layout_constraintBottom_toTopOf="@+id/ldl_label" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:textSize="14sp"
+                android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/ldl_cholesterol_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ldl_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hdl_input"
+                app:layout_constraintBottom_toTopOf="@+id/ldl_input" android:textColor="@color/primary_text"
+                android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/ldl_input"
+                android:hint="@string/mmol_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ldl_label"
+                app:layout_constraintBottom_toTopOf="@+id/trigli_label" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textSize="14sp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/triglycerides_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trigli_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ldl_input"
+                app:layout_constraintBottom_toTopOf="@+id/trigli_input" android:textColor="@color/primary_text"
+                android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/trigli_input"
+                android:hint="@string/mmol_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trigli_label"
+                app:layout_constraintBottom_toTopOf="@+id/blood_glucose_label" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textSize="14sp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/blood_glucose_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/blood_glucose_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trigli_input"
+                app:layout_constraintBottom_toTopOf="@+id/blood_glucose_input" android:textColor="@color/primary_text"
+                android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/blood_glucose_input"
+                android:hint="@string/mmol_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blood_glucose_label"
+                app:layout_constraintBottom_toTopOf="@+id/statements" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textSize="14sp" android:textColor="@color/secondary_text"/>
+        <TextView
+                android:text="@string/statements_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/statements"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blood_glucose_input"
+                app:layout_constraintBottom_toTopOf="@+id/cvd" android:textColor="@color/primary_text"
+                android:layout_marginStart="16dp" android:layout_marginTop="24dp" android:textSize="20sp"/>
+        <CheckBox
+                android:text="@string/cvd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cvd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statements"
+                app:layout_constraintBottom_toTopOf="@+id/diabetes" android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" android:textColor="@color/secondary_text"/>
+        <CheckBox
+                android:text="@string/diabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diabetes"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cvd"
+                app:layout_constraintBottom_toTopOf="@+id/diabetesTOD" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textColor="@color/secondary_text"/>
+        <CheckBox
+                android:text="@string/diabetesTOD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diabetesTOD"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/diabetes"
+                app:layout_constraintBottom_toTopOf="@+id/serious_chronic_kidney_disease"
+                android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                android:textColor="@color/secondary_text"/>
+        <CheckBox
+                android:text="@string/serious_chronic_kidney_disease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serious_chronic_kidney_disease"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diabetesTOD"
+                app:layout_constraintBottom_toTopOf="@+id/chronic_kidney_disease" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textColor="@color/secondary_text"/>
+        <CheckBox
+                android:text="@string/chronic_kidney_disease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chronic_kidney_disease"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serious_chronic_kidney_disease"
+                app:layout_constraintBottom_toTopOf="@+id/calculatorButton" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" android:textColor="@color/secondary_text"/>
+        <Button
+                android:text="@string/survey_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/calculatorButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chronic_kidney_disease"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="24dp"
+                android:background="@color/light_primary_color"
+                android:textColor="@color/light_text_icons" android:layout_marginBottom="24dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
